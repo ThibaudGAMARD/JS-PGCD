@@ -3,4 +3,4 @@ JS-PGCD
 
 Un outil pour générer des tableaux de PGCD.
 
-Usage: Lancez index.html.
+tester en ligne: http://www.gamardthibaud.com/M-PGCD-JS/
