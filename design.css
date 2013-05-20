@@ -1,0 +1,39 @@
+button {
+	margin: auto;
+	display: block;
+}
+
+a {
+	color: teal;
+}
+
+.pgcd {
+	color: maroon;
+}
+
+#contenu {
+	width: 600px;
+	margin: auto;
+	margin-top: 80px;
+	
+	text-align: center;
+}
+
+#tableau {
+	text-align: justify;
+}
+
+#bas {
+	position: relative;
+	top: 5px;
+}
+
+#pdc {
+	height: 0px;
+	overflow: hidden;
+	-moz-transition: height 1s;
+	-webkit-transition: height 1s; 
+	-ms-transition: height 1s; 
+	-o-transition: height 1s; 
+	transition: height 1s; 
+}

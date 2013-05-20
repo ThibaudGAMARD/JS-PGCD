@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>PGCD-JS Calculateur - Thibaud Gamard</title>
+        <link rel="stylesheet" media="screen" type="text/css" title="Design" href="design.css" />
+	</head>
+    <body>
+    
+    <div id="contenu">
+    	<h3>Calculateur de PGCD</h3>
+		<label for="A1">1. A = </label>
+		<input type="number" id="A1" placeholder="Premier Nombre" />
+		<label for="B1">B = </label>
+		<input type="number" id="B1" placeholder="Second Nombre" />
+		<span class="pgcd" id="pgcd1"></span><br />
+		
+		<div id="pdc">
+		<label for="A2">2. A = </label>
+		<input type="number" id="A2" placeholder="Premier Nombre" />
+		<label for="B2">B = </label>
+		<input type="number" id="B2" placeholder="Second Nombre" />
+		<span class="pgcd" id="pgcd2"></span><br />
+		
+		<label for="A3">3. A = </label>
+		<input type="number" id="A3" placeholder="Premier Nombre" />
+		<label for="B3">B = </label>
+		<input type="number" id="B3" placeholder="Second Nombre" />
+		<span class="pgcd" id="pgcd3"></span><br />
+		
+		<label for="A4">4. A = </label>
+		<input type="number" id="A4" placeholder="Premier Nombre" />
+		<label for="B4">B = </label>
+		<input type="number" id="B4" placeholder="Second Nombre" />
+		<span class="pgcd" id="pgcd4"></span><br />
+		
+		<label for="A5">5. A = </label>
+		<input type="number" id="A5" placeholder="Premier Nombre" />
+		<label for="B5">B = </label>
+		<input type="number" id="B5" placeholder="Second Nombre" />
+		<span class="pgcd" id="pgcd5"></span><br />
+		
+		<label for="A6">6. A = </label>
+		<input type="number" id="A6" placeholder="Premier Nombre" />
+		<label for="B6">B = </label>
+		<input type="number" id="B6" placeholder="Second Nombre" />
+		<span class="pgcd" id="pgcd6"></span><br />
+		</div><br />
+
+		
+		<a href="#" title="Cliquez pour afficher d'autres champs" onclick="showPDC();" id="linkPDC">Afficher plus de champs <img src="fleche_bas.png" alt="bas" id="bas" /></a><br />
+		
+		<br />
+		<input type="button" value="Calculer le(s) PGCD" title="Calculer!" onclick="calculer();" /> <input type="reset" value="Reset" title="Remmetre les champs à 0" onclick="reset();" /><br />
+		<a href="mailto:webmaster@gamardthibaud.com" title="Ecrire un mail &agrave; l'auteur">Contact</a> - <a href="apropos.html">A propos</a> - <a href="tableau.html">Tableau</a>
+    </div>
+
+	
+    <script type="text/javascript" src="pgcd.js"></script>
+	</body>
+</html>
