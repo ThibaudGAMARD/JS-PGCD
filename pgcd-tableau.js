@@ -27,15 +27,22 @@ function pgcd(a, b) { // Cette fonction calcule le PGCD de a et b
 function ctableau() { // Cette fonction remplie le tableau avec les PGCD calculés par la fonction PGCD
 	var ligne = 1;
 	var colone = 1;
-	var cmax = 19; // Sont rajoutés pour pouvoir choisir de combien à combien sont les PGCD :D
-	var lmax = 20;
+	var cmax = document.querySelector('#l').value; // Sont rajoutés pour pouvoir choisir de combien à combien sont les PGCD
+	var lmax = document.querySelector('#h').value;
 	var rpgcd = 0; // Est rajouté pour la lisibilité
 	
 	var canvas = document.getElementById('tableau');
 	var ctx = canvas.getContext('2d');
 	ctx.font = "9pt Arial"; // Les fameuses variables pour Canvas
 	
-	while(ligne < lmax) {
+	document.querySelector('#tableau').setAttribute("width", cmax*21+42);
+	document.querySelector('#tableau').setAttribute("height", lmax*21+21);
+
+
+	cmax += 1;
+
+
+	while(ligne < lmax + 1) {
 	
 		rpgcd = pgcd(ligne, colone);
 		
@@ -46,13 +53,14 @@ function ctableau() { // Cette fonction remplie le tableau avec les PGCD calcul�
 		}
 		ctx.fillText(rpgcd, colone*21+21, ligne*21+21);
 	
-		if(colone < cmax) { // Déplacement dans le tableau
+		if(colone <= cmax) { // Déplacement dans le tableau
 			colone += 1;
 			if(ligne == 1) {
 				ctx.fillStyle = "rgb(0,120,0)";
 				ctx.fillText(colone-1, colone*21, ligne*21);
 			}
-		} else if(colone == cmax) {
+		} 
+		if(colone == cmax) {
 			
 			colone = 1;
 			ligne += 1;
@@ -63,39 +71,4 @@ function ctableau() { // Cette fonction remplie le tableau avec les PGCD calcul�
 		
 	}
 }
-
-/*function pgcd(a, b) { // Cette fonction calcule le PGCD de a et b
-	if(a > 0 && b > 0) {
-	while(a != b) {
-		if(a > b) {
-			a = a-b;
-		}
-		if(b > a) {
-			b = b-a;
-		}
-	}
-	}
-	
-	return a;
-}
-
-function ctableau() { // Cette fonction remplie le tableau avec les PGCD calculés par la fonction PGCD
-	var ligne = 1;
-	var colone = 1;
-	var i = 1;
-	
-	var canvas = document.getElementById('tableau');
-	var ctx = canvas.getContext('2d');
-	ctx.font = "9pt Arial";
-	
-	while(i < 144) {
-		ctx.fillText(pgcd(ligne, colone), colone*19, ligne*19);
-		i += 1;
-		colone += 1;
-		if(colone == 13) {
-		ligne += 1;
-		colone = 1;
-		}
-	}
-}*/
 
